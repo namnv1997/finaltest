@@ -17,6 +17,33 @@
     <script src="js/thread.js"></script>
     <script src="js/webrtc.js"></script>
     <script src="js/rtc-controller.js"></script>
+	
+	<script src="https://serveruserstream.herokuapp.com/socket.io/socket.io.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+
+        $(function () {
+            var socket = io("https://serveruserstream.herokuapp.com/");
+            $('form').submit(function () {
+                socket.emit('new user online', $('#streamname').val());
+                return false;
+            });
+            socket.on('list user', function (users) {
+                users.forEach(function (element) {
+                    $('#userOnline').append(`<li id="${element}">${element}</li>`);
+                });
+            });
+
+            socket.on('user disconnected', function (user_dis) {
+                $(`#${user_dis}`).remove();
+                console.log("dis: " + { user_dis });
+            });
+            socket.on('new user online', function (user) {
+                $('#userOnline').append(`<li id="${user}">${user}</li>`);
+            });
+
+        });
+    </script>
 </head>
 
 <body>
@@ -158,6 +185,14 @@
         });
     });
 </script>
+
+
+    <div>
+        <h3 style="margin-left:20px;">Stream Now</h3>
+        <ul id="userOnline" style="margin-left:20px; overflow: auto;">
+
+        </ul>
+    </div>
 </body>
 
 </html>
