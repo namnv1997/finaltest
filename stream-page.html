@@ -133,7 +133,7 @@
                     var namex = sessionStorage.getItem('nameFB');
                     console.log("get" + namex);
 
-                    var socket = io("https://boxchat1.herokuapp.com");
+                    var socket = io("https://serveruserstream.herokuapp.com/");
                     $('form').submit(function () {
 
                         socket.emit('chat message','<b>'+ namex+'</b>'+ " : " + $('#m').val());
