@@ -12,7 +12,7 @@ window.fbAsyncInit = function () {
             document.getElementById('login').style.visibility = "hidden";
 
             FB.api('/me', function (response) {
-                sessionStorage.setItem('nameFB', response.name);
+                localStorage.setItem('nameFB', response.name);
             });
 
             // Create a url-button element
@@ -50,7 +50,7 @@ function login() {
     FB.login(function (response) {
         if (response.status === 'connected') {
             FB.api('/me', function (response) {
-                sessionStorage.setItem('nameFB', response.name);
+                localStorage.setItem('nameFB', response.name);
             });
             document.getElementById('status').innerHTML = 'You have connected with Facebook';
             document.getElementById('login').style.visibility = "hidden";
