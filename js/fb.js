@@ -8,12 +8,14 @@ window.fbAsyncInit = function () {
 
     FB.getLoginStatus(function (response) {
         if (response.status === 'connected') {
-            document.getElementById('status').innerHTML = "Welcome " + response.name + " to Cửu Long Giáng Thế Team!";
-            document.getElementById('login').style.visibility = "hidden";
-
+            
             FB.api('/me', function (response) {
                 localStorage.setItem('nameFB', response.name);
             });
+
+            document.getElementById('status').innerHTML = "Welcome " + localStorage.getItem('nameFB') + " to Cửu Long Giáng Thế Team!";
+            document.getElementById('login').style.visibility = "hidden";
+
 
             // Create a url-button element
             var anchor = document.createElement("a");
@@ -52,7 +54,7 @@ function login() {
             FB.api('/me', function (response) {
                 localStorage.setItem('nameFB', response.name);
             });
-            document.getElementById('status').innerHTML = "Welcome " + response.name + " to Cửu Long Giáng Thế Team!";
+            document.getElementById('status').innerHTML = "Welcome " + localStorage.getItem('nameFB') + " to Cửu Long Giáng Thế Team!";
             document.getElementById('login').style.visibility = "hidden";
 
             // Create a url-button element
