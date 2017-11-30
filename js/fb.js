@@ -8,7 +8,7 @@ window.fbAsyncInit = function () {
 
     FB.getLoginStatus(function (response) {
         if (response.status === 'connected') {
-            document.getElementById('status').innerHTML = 'You have connected with Facebook';
+            document.getElementById('status').innerHTML = "Welcome " + response.name + " to Cửu Long Giáng Thế Team!";
             document.getElementById('login').style.visibility = "hidden";
 
             FB.api('/me', function (response) {
@@ -52,12 +52,12 @@ function login() {
             FB.api('/me', function (response) {
                 localStorage.setItem('nameFB', response.name);
             });
-            document.getElementById('status').innerHTML = 'You have connected with Facebook';
+            document.getElementById('status').innerHTML = "Welcome " + response.name + " to Cửu Long Giáng Thế Team!";
             document.getElementById('login').style.visibility = "hidden";
 
             // Create a url-button element
             var anchor = document.createElement("a");
-            var anchorValue = document.createTextNode("Go to home now");
+            var anchorValue = document.createTextNode("Explore Beyond Limits");
             anchor.appendChild(anchorValue);
             document.getElementById('url-button').appendChild(anchor);
             anchor.classList.add('btn');
