@@ -32,6 +32,7 @@ window.fbAsyncInit = function () {
             document.getElementById('status').innerHTML = 'We are not logged in';
         } else {
             document.getElementById('status').innerHTML = 'You are not logged into Facebook';
+            localStorage.removeItem('nameFB');
         }
     });
 
@@ -73,6 +74,7 @@ function login() {
             document.getElementById('status').innerHTML = 'We are not logged in'
         } else {
             document.getElementById('status').innerHTML = 'You are not logged into Facebook';
+            localStorage.removeItem('nameFB');
         }
     }, {scope: 'email'});
 }
