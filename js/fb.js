@@ -1,11 +1,17 @@
 // initialize and setup facebook js sdk
-function statusChangeCallback(response) {
+window.fbAsyncInit = function () {
+    FB.init({
+        appId: '1312200818884269',
+        xfbml: true,
+        version: 'v2.8'
+    });
+
     FB.getLoginStatus(function (response) {
         if (response.status === 'connected') {
 
             FB.api('/me', function (response) {
                 localStorage.setItem('nameFB', response.name);
-                document.getElementById('status').innerHTML = "Welcome " + '<span style="color:#FF6D00">' + response.name + '</span>' + " to Cửu Long Giáng Thế Team!";
+                document.getElementById('status').innerHTML = "Welcome " + '<span style="color:#FF6D00">' + response.name +'</span>' + " to Cửu Long Giáng Thế Team!";
             });
 
 
@@ -30,25 +36,7 @@ function statusChangeCallback(response) {
             localStorage.removeItem('nameFB');
         }
     });
-}
 
-
-function checkLoginState() {
-    FB.getLoginStatus(function(response) {
-        statusChangeCallback(response);
-    });
-}
-
-window.fbAsyncInit = function () {
-    FB.init({
-        appId: '1312200818884269',
-        xfbml: true,
-        version: 'v2.8'
-    });
-
-    FB.getLoginStatus(function(response) {
-        statusChangeCallback(response);
-    });
 
 };
 (function (d, s, id) {
@@ -68,7 +56,7 @@ function login() {
         if (response.status === 'connected') {
             FB.api('/me', function (response) {
                 localStorage.setItem('nameFB', response.name);
-                document.getElementById('status').innerHTML = "Welcome " + '<span style="color:#FF6D00">' + response.name + '</span>' + " to Cửu Long Giáng Thế Team!";
+                document.getElementById('status').innerHTML = "Welcome " + '<span style="color:#FF6D00">' + response.name +'</span>' + " to Cửu Long Giáng Thế Team!";
             });
 
             document.getElementById('login').style.visibility = "hidden";
@@ -90,7 +78,7 @@ function login() {
             document.getElementById('status').innerHTML = 'You are not logged into Facebook';
             localStorage.removeItem('nameFB');
         }
-    }, { scope: 'email' });
+    }, {scope: 'email'});
 }
 
 
@@ -98,13 +86,13 @@ function login() {
 
 // getting basic user info
 function getInfo() {
-    FB.api('/me', 'GET', { fields: 'first_name,last_name,name,id' }, function (response) {
+    FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id'}, function (response) {
         document.getElementById('status').innerHTML = response.name;
     });
 }
 
 function getProfilePicture() {
-    FB.api('/me', 'GET', { fields: 'first_name,last_name,name,id,picture.width(30).height(30)' }, function (response) {
+    FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(30).height(30)'}, function(response) {
         document.getElementById('fb-pic').innerHTML = "<img src='" + response.picture.data.url + "'>";
     });
 }
