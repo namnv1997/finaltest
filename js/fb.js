@@ -30,6 +30,7 @@ window.fbAsyncInit = function () {
 
         } else if (response.status === 'not_authorized') {
             document.getElementById('status').innerHTML = 'We are not logged in';
+            localStorage.removeItem('nameFB');
         } else {
             document.getElementById('status').innerHTML = 'You are not logged into Facebook';
             localStorage.removeItem('nameFB');
@@ -72,6 +73,7 @@ function login() {
 
         } else if (response.status === 'not_authorized') {
             document.getElementById('status').innerHTML = 'We are not logged in'
+            localStorage.removeItem('nameFB');
         } else {
             document.getElementById('status').innerHTML = 'You are not logged into Facebook';
             localStorage.removeItem('nameFB');
