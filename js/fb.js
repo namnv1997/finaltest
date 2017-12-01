@@ -1,4 +1,44 @@
 // initialize and setup facebook js sdk
+function statusChangeCallback(response) {
+    FB.getLoginStatus(function (response) {
+        if (response.status === 'connected') {
+
+            FB.api('/me', function (response) {
+                localStorage.setItem('nameFB', response.name);
+                document.getElementById('status').innerHTML = "Welcome " + '<span style="color:#FF6D00">' + response.name + '</span>' + " to Cửu Long Giáng Thế Team!";
+            });
+
+
+            document.getElementById('login').style.visibility = "hidden";
+
+
+            // Create a url-button element
+            var anchor = document.createElement("a");
+            var anchorValue = document.createTextNode("Go to home now");
+            anchor.appendChild(anchorValue);
+            document.getElementById('url-button').appendChild(anchor);
+            anchor.classList.add('btn');
+            anchor.classList.add('to-home-button');
+            document.querySelector('.to-home-button').setAttribute('href', 'home-page.html');
+
+
+        } else if (response.status === 'not_authorized') {
+            document.getElementById('status').innerHTML = 'We are not logged in';
+            localStorage.removeItem('nameFB');
+        } else {
+            document.getElementById('status').innerHTML = 'You are not logged into Facebook';
+            localStorage.removeItem('nameFB');
+        }
+    });
+}
+
+
+function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+        statusChangeCallback(response);
+    });
+}
+
 window.fbAsyncInit = function () {
     FB.init({
         appId: '1312200818884269',
@@ -6,40 +46,9 @@ window.fbAsyncInit = function () {
         version: 'v2.8'
     });
 
-    function checkLoginState() {
-        FB.getLoginStatus(function (response) {
-            if (response.status === 'connected') {
-
-                FB.api('/me', function (response) {
-                    localStorage.setItem('nameFB', response.name);
-                    document.getElementById('status').innerHTML = "Welcome " + '<span style="color:#FF6D00">' + response.name + '</span>' + " to Cửu Long Giáng Thế Team!";
-                });
-
-
-                document.getElementById('login').style.visibility = "hidden";
-
-
-                // Create a url-button element
-                var anchor = document.createElement("a");
-                var anchorValue = document.createTextNode("Go to home now");
-                anchor.appendChild(anchorValue);
-                document.getElementById('url-button').appendChild(anchor);
-                anchor.classList.add('btn');
-                anchor.classList.add('to-home-button');
-                document.querySelector('.to-home-button').setAttribute('href', 'home-page.html');
-
-
-            } else if (response.status === 'not_authorized') {
-                document.getElementById('status').innerHTML = 'We are not logged in';
-                localStorage.removeItem('nameFB');
-            } else {
-                document.getElementById('status').innerHTML = 'You are not logged into Facebook';
-                localStorage.removeItem('nameFB');
-            }
-        });
-    }
-    checkLoginState();
-
+    FB.getLoginStatus(function(response) {
+        statusChangeCallback(response);
+    });
 
 };
 (function (d, s, id) {
@@ -53,9 +62,6 @@ window.fbAsyncInit = function () {
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
-function checkLogin(){
-    checkLoginState();
-}
 // login with facebook with extra permissions
 function login() {
     FB.login(function (response) {
