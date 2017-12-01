@@ -1,20 +1,20 @@
 // initialize and setup facebook js sdk
 window.fbAsyncInit = function () {
     FB.init({
-        appId: '1312200818884269',
+        appId: '1280051495474685',
         xfbml: true,
         version: 'v2.8'
     });
 
     FB.getLoginStatus(function (response) {
         if (response.status === 'connected') {
-            
+
             FB.api('/me', function (response) {
                 localStorage.setItem('nameFB', response.name);
-                document.getElementById('status').innerHTML = "Welcome " + '<span style="color:red">' + response.name +'</span>' + " to Cửu Long Giáng Thế Team!";
+                document.getElementById('status').innerHTML = "Welcome " + '<span style="color:#FF6D00">' + response.name +'</span>' + " to Cửu Long Giáng Thế Team!";
             });
 
-            
+
             document.getElementById('login').style.visibility = "hidden";
 
 
@@ -54,14 +54,14 @@ function login() {
         if (response.status === 'connected') {
             FB.api('/me', function (response) {
                 localStorage.setItem('nameFB', response.name);
-                document.getElementById('status').innerHTML = "Welcome " + '<span style="color:red">' + response.name +'</span>' + " to Cửu Long Giáng Thế Team!";
+                document.getElementById('status').innerHTML = "Welcome " + '<span style="color:#FF6D00">' + response.name +'</span>' + " to Cửu Long Giáng Thế Team!";
             });
-            
+
             document.getElementById('login').style.visibility = "hidden";
 
             // Create a url-button element
             var anchor = document.createElement("a");
-            var anchorValue = document.createTextNode("Explore Beyond Limits");
+            var anchorValue = document.createTextNode("Go to home now");
             anchor.appendChild(anchorValue);
             document.getElementById('url-button').appendChild(anchor);
             anchor.classList.add('btn');
