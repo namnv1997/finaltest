@@ -1,31 +1,5 @@
 <!DOCTYPE html>
 <html>
-<script>
-    window.fbAsyncInit = function () {
-        FB.init({
-            appId: '1312200818884269',
-            xfbml: true,
-            version: 'v2.1'
-        });
-
-        FB.getLoginStatus(function (response) {
-            if (response.status === 'connected') {
-                console.log("connected");
-            } else {
-                window.location.href = "error-page.html";
-            }
-        });
-    };
-
-    (function (d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) { return; }
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-
-</script>
 
 <head>
     <title>Live Streaming</title>
@@ -41,6 +15,32 @@
     <script src="vendor/js/jquery/jquery-3.2.1.min.js"></script>
     <script src="vendor/js/bootstraps/bootstrap.min.js"></script>
     <script src="js/fb.js"></script>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '1312200818884269',
+                xfbml: true,
+                version: 'v2.1'
+            });
+
+            FB.getLoginStatus(function (response) {
+                if (response.status === 'connected') {
+                    console.log("connected");
+                } else {
+                    window.location.href = "error-page.html";
+                }
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+    </script>
     <script src="js/modernizr.custom.js"></script>
     <script src="js/thread.js"></script>
     <script src="js/webrtc.js"></script>

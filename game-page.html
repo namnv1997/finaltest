@@ -1,21 +1,46 @@
 <!DOCTYPE html>
 
-<script>
-    if (localStorage.getItem('nameFB') === null) window.location.href = "index.html";
-</script>
-
 <head>
     <title>Play Game</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="img/icon.png">
-    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
-    <link href="./static/css/main.c8c1bec7.css" rel="stylesheet">
+    <link rel="stylesheet" href="vendor/fonts/font-awesome-4.3.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="vendor/css/animate/animate.css">
+    <link rel="stylesheet" href="vendor/css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/logo.css">
+    <link rel="stylesheet" href="css/stream-page.css">
+    <script src="vendor/js/jquery/jquery-3.2.1.min.js"></script>
+    <script src="vendor/js/bootstraps/bootstrap.min.js"></script>
     <script>
-        if (localStorage.getItem('nameFB') === null){
-            window.location.href = "error-page.html";
-        }
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '1312200818884269',
+                xfbml: true,
+                version: 'v2.1'
+            });
+
+            FB.getLoginStatus(function (response) {
+                if (response.status === 'connected') {
+                    console.log("connected");
+                } else {
+                    window.location.href = "error-page.html";
+                }
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
     </script>
+    <script src="js/firebare.js"></script>
+    <link href="./static/css/main.c8c1bec7.css" rel="stylesheet">
 </head>
 
 <body style="margin:0">

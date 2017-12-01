@@ -8,12 +8,33 @@
     <link rel="icon" href="img/icon.png">
     <link rel="stylesheet" href="css/home-page.css">
     <script src="vendor/js/jquery/jquery-3.2.1.min.js"></script>
-    <script src="js/home-page.js"></script>
     <script>
-        if (localStorage.getItem('nameFB') === null){
-            window.location.href = "error-page.html";
-        }
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '1312200818884269',
+                xfbml: true,
+                version: 'v2.1'
+            });
+
+            FB.getLoginStatus(function (response) {
+                if (response.status === 'connected') {
+                    console.log("connected");
+                } else {
+                    window.location.href = "error-page.html";
+                }
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
     </script>
+    <script src="js/home-page.js"></script>
 </head>
 
 <body class="home blog active-slide-1">
