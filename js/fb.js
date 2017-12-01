@@ -53,6 +53,9 @@ window.fbAsyncInit = function () {
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
+function checkLogin(){
+    checkLoginState();
+}
 // login with facebook with extra permissions
 function login() {
     FB.login(function (response) {
