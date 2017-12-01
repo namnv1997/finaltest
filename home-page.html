@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="css/home-page.css">
     <script src="vendor/js/jquery/jquery-3.2.1.min.js"></script>
     <script src="js/home-page.js"></script>
+    <script src="js/fb.js"></script>
     <script>
+        login();
         if (localStorage.getItem('nameFB') === null){
             window.location.href = "error-page.html";
         }
