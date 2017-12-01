@@ -27,6 +27,7 @@ input::-webkit-input-placeholder {
 }
 body{
     font-family: "Comic Sans MS" !important;
+    background-color: #EEEEEE;
 }
 
 #nav-bar {
