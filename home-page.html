@@ -26,10 +26,13 @@
             js.src = "//connect.facebook.net/en_US/sdk.js";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
-        checkLoginState();
-        if (localStorage.getItem('nameFB') === null) {
-            window.location.href = "error-page.html";
-        }
+
+        FB.getLoginStatus(function (response) {
+            if (response.status === 'connected') {
+                console.log("connected");
+            } else {
+                window.location.href = "error-page.html";
+            }
     </script>
 </head>
 
