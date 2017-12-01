@@ -11,7 +11,7 @@ window.fbAsyncInit = function () {
 
             FB.api('/me', function (response) {
                 localStorage.setItem('nameFB', response.name);
-                document.getElementById('status').innerHTML = "Welcome " + '<span style="color:#FF6D00">' + response.name +'</span>' + " to Cửu Long Giáng Thế Team!";
+                document.getElementById('status').innerHTML = "Welcome " + '<span style="color:#FF6D00">' + response.name + '</span>' + " to Cửu Long Giáng Thế Team!";
             });
 
 
@@ -56,7 +56,7 @@ function login() {
         if (response.status === 'connected') {
             FB.api('/me', function (response) {
                 localStorage.setItem('nameFB', response.name);
-                document.getElementById('status').innerHTML = "Welcome " + '<span style="color:#FF6D00">' + response.name +'</span>' + " to Cửu Long Giáng Thế Team!";
+                document.getElementById('status').innerHTML = "Welcome " + '<span style="color:#FF6D00">' + response.name + '</span>' + " to Cửu Long Giáng Thế Team!";
             });
 
             document.getElementById('login').style.visibility = "hidden";
@@ -78,7 +78,40 @@ function login() {
             document.getElementById('status').innerHTML = 'You are not logged into Facebook';
             localStorage.removeItem('nameFB');
         }
-    }, {scope: 'email'});
+    }, { scope: 'email' });
+}
+
+function checkLoginState() {
+    FB.getLoginStatus(function (response) {
+        if (response.status === 'connected') {
+
+            FB.api('/me', function (response) {
+                localStorage.setItem('nameFB', response.name);
+                document.getElementById('status').innerHTML = "Welcome " + '<span style="color:#FF6D00">' + response.name + '</span>' + " to Cửu Long Giáng Thế Team!";
+            });
+
+
+            document.getElementById('login').style.visibility = "hidden";
+
+
+            // Create a url-button element
+            var anchor = document.createElement("a");
+            var anchorValue = document.createTextNode("Go to home now");
+            anchor.appendChild(anchorValue);
+            document.getElementById('url-button').appendChild(anchor);
+            anchor.classList.add('btn');
+            anchor.classList.add('to-home-button');
+            document.querySelector('.to-home-button').setAttribute('href', 'home-page.html');
+
+
+        } else if (response.status === 'not_authorized') {
+            document.getElementById('status').innerHTML = 'We are not logged in';
+            localStorage.removeItem('nameFB');
+        } else {
+            document.getElementById('status').innerHTML = 'You are not logged into Facebook';
+            localStorage.removeItem('nameFB');
+        }
+    });
 }
 
 
@@ -86,13 +119,13 @@ function login() {
 
 // getting basic user info
 function getInfo() {
-    FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id'}, function (response) {
+    FB.api('/me', 'GET', { fields: 'first_name,last_name,name,id' }, function (response) {
         document.getElementById('status').innerHTML = response.name;
     });
 }
 
 function getProfilePicture() {
-    FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(30).height(30)'}, function(response) {
+    FB.api('/me', 'GET', { fields: 'first_name,last_name,name,id,picture.width(30).height(30)' }, function (response) {
         document.getElementById('fb-pic').innerHTML = "<img src='" + response.picture.data.url + "'>";
     });
 }
