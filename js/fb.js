@@ -1,7 +1,7 @@
 // initialize and setup facebook js sdk
 window.fbAsyncInit = function () {
     FB.init({
-        appId: '1312200818884269',
+        appId: '1280051495474685',
         xfbml: true,
         version: 'v2.8'
     });
@@ -11,7 +11,7 @@ window.fbAsyncInit = function () {
 
             FB.api('/me', function (response) {
                 localStorage.setItem('nameFB', response.name);
-                document.getElementById('status').innerHTML = "Welcome " + '<span style="color:#FF6D00">' + response.name + '</span>' + " to Cửu Long Giáng Thế Team!";
+                document.getElementById('status').innerHTML = "Welcome " + '<span style="color:#FF6D00">' + response.name +'</span>' + " to Cửu Long Giáng Thế Team!";
             });
 
 
@@ -54,7 +54,7 @@ function login() {
         if (response.status === 'connected') {
             FB.api('/me', function (response) {
                 localStorage.setItem('nameFB', response.name);
-                document.getElementById('status').innerHTML = "Welcome " + '<span style="color:#FF6D00">' + response.name + '</span>' + " to Cửu Long Giáng Thế Team!";
+                document.getElementById('status').innerHTML = "Welcome " + '<span style="color:#FF6D00">' + response.name +'</span>' + " to Cửu Long Giáng Thế Team!";
             });
 
             document.getElementById('login').style.visibility = "hidden";
@@ -74,7 +74,7 @@ function login() {
         } else {
             document.getElementById('status').innerHTML = 'You are not logged into Facebook';
         }
-    }, { scope: 'email' });
+    }, {scope: 'email'});
 }
 
 
@@ -82,13 +82,13 @@ function login() {
 
 // getting basic user info
 function getInfo() {
-    FB.api('/me', 'GET', { fields: 'first_name,last_name,name,id' }, function (response) {
+    FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id'}, function (response) {
         document.getElementById('status').innerHTML = response.name;
     });
 }
 
 function getProfilePicture() {
-    FB.api('/me', 'GET', { fields: 'first_name,last_name,name,id,picture.width(30).height(30)' }, function (response) {
+    FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(30).height(30)'}, function(response) {
         document.getElementById('fb-pic').innerHTML = "<img src='" + response.picture.data.url + "'>";
     });
 }
