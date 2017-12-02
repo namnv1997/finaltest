@@ -163,7 +163,7 @@
             <script>
 
                 $(function () {
-                    var namex = sessionStorage.getItem('nameFB');
+                    var namex = localStorage.getItem('nameFB');
                     console.log("get" + namex);
 
                     var socket = io("https://boxchat1.herokuapp.com/");
