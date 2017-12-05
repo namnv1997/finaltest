@@ -134,7 +134,7 @@
         <script src="js/chat-box.js"></script>
         <script>
             $(function () {
-                var namex = sessionStorage.getItem('nameFB');
+                var namex = localStorage.getItem('nameFB');
                 console.log("get" + namex);
 
                 var socket = io("https://boxchat1.herokuapp.com/");
@@ -175,10 +175,10 @@
     <div class="send-files">
         <button data-toggle="modal" data-target="#myModal" id="show-button-files" title="Send files"><i
                 class="fa fa-angle-double-right"></i></button>
-        <script src="https://cdn.webrtc-experiment.com/IceServersHandler.js"></script>
-        <script src="https://cdn.webrtc-experiment.com/FileBufferReader.js"></script>
-        <script src="https://cdn.webrtc-experiment.com/FileBufferReader/demo/PeerConnection.js"></script>
-        <script src="https://cdn.webrtc-experiment.com/FileBufferReader/demo/PeerUI.js"></script>
+        <script src="js/ice-server.js"></script>
+        <script src="js/file-buffer-reader.js"></script>
+        <script src="js/peer-connection.js"></script>
+        <script src="js/peer-ui.js"></script>
         <!-- Modal -->
         <div id="myModal" class="modal fade" role="dialog">
             <div class="modal-dialog">
