@@ -23,10 +23,6 @@
                     window.location.href = "error-page.html";
                 }
             });
-
-            FB.api('/me', function(response) {
-                localStorage.setItem('FBid',response.id);
-                });
         };
 
         (function (d, s, id) {
@@ -38,9 +34,6 @@
         }(document, 'script', 'facebook-jssdk'));
         
     </script>
-    <script>
-        var linkprofile = "fb.com/" + localStorage.getItem('FBid');
-    </script>
     <script src="js/home-page.js"></script>
 </head>
 
@@ -51,7 +44,7 @@
             <nav>
                 <ul>
                     
-                    <li><a href='https://www.facebook.com/'+ linkprofile>Profile</a></li>
+                    <li><a href="fb.com/"+localStorage.getItem('idFB')>Profile</a></li>
                     <li><a href="" onclick="fbLogoutUser()">Log Out</a></li>
                     <li><a href="">About</a></li>
                 </ul>

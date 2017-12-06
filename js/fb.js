@@ -11,6 +11,8 @@ window.fbAsyncInit = function () {
 
             FB.api('/me', function (response) {
                 localStorage.setItem('nameFB', response.name);
+            
+                localStorage.setItem('idFB',response.id);
                 document.getElementById('status').innerHTML = "Welcome " + '<span style="color:#FF6D00">' + response.name +'</span>' + " to Cửu Long Giáng Thế Team!";
             });
 
@@ -54,6 +56,7 @@ function login() {
         if (response.status === 'connected') {
             FB.api('/me', function (response) {
                 localStorage.setItem('nameFB', response.name);
+                localStorage.setItem('idFB',response.id);
                 document.getElementById('status').innerHTML = "Welcome " + '<span style="color:#FF6D00">' + response.name +'</span>' + " to Cửu Long Giáng Thế Team!";
             });
 
