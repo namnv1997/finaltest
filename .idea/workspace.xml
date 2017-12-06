@@ -14,12 +14,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="43" lean-forward="false" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+            <state relative-caret-position="340">
+              <caret line="30" column="21" lean-forward="true" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stream-page.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/stream-page.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1101">
+              <caret line="239" column="100" lean-forward="true" selection-start-line="239" selection-start-column="100" selection-end-line="239" selection-end-column="100" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="group-call-page.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/group-call-page.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="453">
+              <caret line="170" column="96" lean-forward="true" selection-start-line="170" selection-start-column="96" selection-end-line="170" selection-end-column="96" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home-page.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/home-page.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="45" column="51" lean-forward="true" selection-start-line="45" selection-start-column="51" selection-end-line="45" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fb.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/fb.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="612">
+              <caret line="95" column="16" lean-forward="true" selection-start-line="95" selection-start-column="16" selection-end-line="95" selection-end-column="16" />
+              <folding>
+                <marker date="1512315838000" expanded="true" signature="470:483" ph="..." />
+                <marker date="1512315838000" expanded="true" signature="2046:2059" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -29,9 +72,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -62,17 +105,16 @@
       <find>body</find>
       <find>incall</find>
       <find>font-family</find>
+      <find>btn</find>
+      <find>canva</find>
+      <find>rgba</find>
+      <find>send</find>
+      <find>log</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/js/webrtc.js" />
-        <option value="$PROJECT_DIR$/js/rtc-controller.js" />
-        <option value="$PROJECT_DIR$/css/stylesheet.css" />
-        <option value="$PROJECT_DIR$/css/sd.css" />
-        <option value="$PROJECT_DIR$/js/socket-io.js" />
-        <option value="$PROJECT_DIR$/get-screen-id.js" />
         <option value="$PROJECT_DIR$/js/get-screen-id.js" />
         <option value="$PROJECT_DIR$/js/bandwidth-handler.js" />
         <option value="$PROJECT_DIR$/js/screen.js" />
@@ -105,19 +147,25 @@
         <option value="$PROJECT_DIR$/js/service-worker.js" />
         <option value="D:/finaltest/js/fb.js" />
         <option value="$PROJECT_DIR$/js/firebare.js" />
-        <option value="$PROJECT_DIR$/home-page.html" />
         <option value="$PROJECT_DIR$/screen-broadcast-page.html" />
         <option value="$PROJECT_DIR$/js/fb.js" />
         <option value="$PROJECT_DIR$/css/stream-page.css" />
-        <option value="$PROJECT_DIR$/game-page.html" />
-        <option value="$PROJECT_DIR$/static/css/main.c8c1bec7.css" />
         <option value="$PROJECT_DIR$/js/socket.js" />
-        <option value="$PROJECT_DIR$/stream-page.html" />
         <option value="$PROJECT_DIR$/ice-server.js" />
         <option value="$PROJECT_DIR$/js/file-buffer-reader.js" />
         <option value="$PROJECT_DIR$/js/peer-connection.js" />
         <option value="$PROJECT_DIR$/js/peer-ui.js" />
+        <option value="$PROJECT_DIR$/static/css/main.c8c1bec7.css" />
+        <option value="$PROJECT_DIR$/game-page.html" />
+        <option value="$USER_HOME$/Downloads/Fireworks/js/fireworks.js" />
+        <option value="$USER_HOME$/Downloads/Fireworks/js/h.js" />
+        <option value="$PROJECT_DIR$/gf.html" />
+        <option value="$USER_HOME$/Downloads/Fireworks/index.html" />
+        <option value="$PROJECT_DIR$/firework/js/fireworks.js" />
+        <option value="$PROJECT_DIR$/firework/css/fireworks.css" />
+        <option value="$PROJECT_DIR$/stream-page.html" />
         <option value="$PROJECT_DIR$/group-call-page.html" />
+        <option value="$PROJECT_DIR$/home-page.html" />
       </list>
     </option>
   </component>
@@ -153,6 +201,11 @@
             <path>
               <item name="BTL_Web" type="b2602c69:ProjectViewProjectNode" />
               <item name="BTL_Web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BTL_Web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BTL_Web" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -233,14 +286,17 @@
       <workItem from="1512126185915" duration="29034000" />
       <workItem from="1512347668034" duration="1555000" />
       <workItem from="1512475109882" duration="785000" />
+      <workItem from="1512477118932" duration="1167000" />
+      <workItem from="1512526012343" duration="3667000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="186745000" />
+    <option name="totallyTimeSpent" value="191579000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1830161" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -274,22 +330,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Downloads/chatboxx/index.js" />
-    <entry file="file://$PROJECT_DIR$/dfg.html" />
-    <entry file="file://$PROJECT_DIR$/chat-box.js" />
-    <entry file="file://$USER_HOME$/Downloads/index/index.html" />
-    <entry file="file://$USER_HOME$/Downloads/BTL_Web/stream-page.css" />
-    <entry file="file://$USER_HOME$/Downloads/BTL_Web/stream-page.html" />
-    <entry file="file://$USER_HOME$/Downloads/github.io/fb-login.js" />
-    <entry file="file://$PROJECT_DIR$/js/home-page.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="47" column="77" lean-forward="true" selection-start-line="47" selection-start-column="77" selection-end-line="47" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/github.io/chatbox.html" />
-    <entry file="file://$USER_HOME$/Downloads/FileBufferReader/index.html" />
     <entry file="file://$PROJECT_DIR$/dgh.html" />
     <entry file="file://$PROJECT_DIR$/css/home-page.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -406,13 +446,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/fb.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1233">
-          <caret line="3" column="32" lean-forward="false" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/stream-page.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -420,18 +453,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/main.c8c1bec7.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="29" column="30" lean-forward="false" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/socket-io.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -439,31 +464,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1970">
           <caret line="1890" column="37" lean-forward="false" selection-start-line="1890" selection-start-column="37" selection-end-line="1890" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stream-page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="58" column="71" lean-forward="true" selection-start-line="58" selection-start-column="71" selection-end-line="58" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/home-page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="131" column="58" lean-forward="false" selection-start-line="131" selection-start-column="58" selection-end-line="131" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game-page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="906">
-          <caret line="71" column="55" lean-forward="true" selection-start-line="71" selection-start-column="55" selection-end-line="71" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -471,7 +471,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-748">
           <caret line="19" column="28" lean-forward="true" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -479,7 +478,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="32" column="5" lean-forward="false" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -487,7 +485,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1110">
           <caret line="1244" column="5" lean-forward="false" selection-start-line="1244" selection-start-column="5" selection-end-line="1244" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -495,7 +492,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="804">
           <caret line="394" column="5" lean-forward="false" selection-start-line="394" selection-start-column="5" selection-end-line="394" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -503,24 +499,143 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="141">
           <caret line="695" column="5" lean-forward="true" selection-start-line="695" selection-start-column="5" selection-end-line="695" selection-end-column="5" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/group-call-page.html">
+    <entry file="file://$PROJECT_DIR$/static/css/main.c8c1bec7.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3060">
-          <caret line="180" column="45" lean-forward="true" selection-start-line="180" selection-start-column="45" selection-end-line="180" selection-end-column="45" />
+        <state relative-caret-position="425">
+          <caret line="25" column="20" lean-forward="false" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gf.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="30" lean-forward="false" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/Fireworks/js/h.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="4" lean-forward="false" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game-page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="70" column="39" lean-forward="false" selection-start-line="70" selection-start-column="39" selection-end-line="70" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/Fireworks/js/fireworks.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2485">
+          <caret line="103" column="34" lean-forward="false" selection-start-line="103" selection-start-column="11" selection-end-line="103" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/Fireworks/css/fireworks.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/Fireworks/third_party/requestanimframe.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/Fireworks/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="43" lean-forward="false" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+        <state relative-caret-position="340">
+          <caret line="30" column="21" lean-forward="true" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firework/third_party/requestanimframe.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="29" lean-forward="false" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firework/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="24" lean-forward="true" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firework/css/fireworks.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="33" column="109" lean-forward="false" selection-start-line="33" selection-start-column="109" selection-end-line="33" selection-end-column="109" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firework/js/fireworks.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="6" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stream-page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1101">
+          <caret line="239" column="100" lean-forward="true" selection-start-line="239" selection-start-column="100" selection-end-line="239" selection-end-column="100" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/group-call-page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="170" column="96" lean-forward="true" selection-start-line="170" selection-start-column="96" selection-end-line="170" selection-end-column="96" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/fb.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="95" column="16" lean-forward="true" selection-start-line="95" selection-start-column="16" selection-end-line="95" selection-end-column="16" />
+          <folding>
+            <marker date="1512315838000" expanded="true" signature="470:483" ph="..." />
+            <marker date="1512315838000" expanded="true" signature="2046:2059" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home-page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="45" column="51" lean-forward="true" selection-start-line="45" selection-start-column="51" selection-end-line="45" selection-end-column="51" />
           <folding />
         </state>
       </provider>
