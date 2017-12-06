@@ -51,13 +51,13 @@
 
     <script src="js/socket.js"></script>
     <script>
-        // var nameChatStream;
-        // var chatHistory = [];
+        var nameChatStream;
+        var chatHistory = [];
         $(function () {
             var socket = io("https://serveruserstream.herokuapp.com/");
             $('#stream').submit(function () {
                 socket.emit('new user online', $('#streamname').val());
-                // nameChatStream = $('#streamname').val();
+                nameChatStream = $('#streamname').val();
                 return false;
             });
 
@@ -75,20 +75,20 @@
                 $('#userOnline').append(`<li id="${user}">${user}</li>`);
             });
 
-            // $('#watch').submit(function () {
-            //     var history, hist = [];
-            //     var namereq = $('#streamwatch').val();
-            //     history = localStorage.getItem(namereq) + ",";
-            //     var his = history.split('*/,');
-            //     his.forEach(function (hi) {
-            //         $('#messages').append($('<li>').html(hi));
-            //     });
+            $('#watch').submit(function () {
+                var history, hist = [];
+                var namereq = $('#streamwatch').val();
+                history = localStorage.getItem(namereq) + ",";
+                var his = history.split('*/,');
+                his.forEach(function (hi) {
+                    $('#messages').append($('<li>').html(hi));
+                });
 
-            //     nameChatStream = $('#streamwatch').val();
-            //     hist = localStorage.getItem(namereq);
-            //     chatHistory.push(hist);
-            //     return false;
-            // });
+                nameChatStream = $('#streamwatch').val();
+                hist = localStorage.getItem(namereq);
+                chatHistory.push(hist);
+                return false;
+            });
         });
     </script>
 </head>
@@ -205,10 +205,9 @@
 
                     $('#chat-box-form').submit(function () {
                         socket.emit('chat message', '<b>' + namex + '</b>' + " : " + $('#m').val());
-                        $('#m').val('');
-                        // var temp = '<b>' + namex + '</b>' + " : " + $('#m').val() + '*/';
-                        // chatHistory.push(temp);
-                        // localStorage.setItem(nameChatStream, chatHistory);
+                        var temp = '<b>' + namex + '</b>' + " : " + $('#m').val() + '*/';
+                        chatHistory.push(temp);
+                        localStorage.setItem(nameChatStream, chatHistory);
                         return false;
                     });
                     socket.on('chat message', function (msg) {
