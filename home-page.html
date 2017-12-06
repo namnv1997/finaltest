@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/home-page.css">
     <script src="vendor/js/jquery/jquery-3.2.1.min.js"></script>
     <script>
+        var idFb;
         window.fbAsyncInit = function () {
             FB.init({
                 appId: '1312200818884269',
@@ -23,6 +24,10 @@
                     window.location.href = "error-page.html";
                 }
             });
+
+            FB.api('/me', function(response) {
+                idFb = response.id;
+                });
         };
 
         (function (d, s, id) {
@@ -43,7 +48,7 @@
         <div id="navigation-overlay" class="navigation-overlay">
             <nav>
                 <ul>
-                    <li><a href="">Profile</a></li>
+                    <li><a href="fb.com/"+idFb >Profile</a></li>
                     <li><a href="" onclick="fbLogoutUser()">Log Out</a></li>
                     <li><a href="">About</a></li>
                 </ul>
