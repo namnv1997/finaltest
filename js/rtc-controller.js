@@ -105,9 +105,9 @@
             video.setAttribute('autoplay', 'autoplay');
             video.setAttribute('data-number', phone.number());
             // video.setAttribute('controls', '');
-            vid.style.cssText ="-moz-transform: scale(-1, 1); \
-            			 	-webkit-transform: scale(-1, 1); -o-transform: scale(-1, 1); \
-            				transform: scale(-1, 1); filter: FlipH;";
+           // vid.style.cssText ="-moz-transform: scale(-1, 1); \
+            //			 	-webkit-transform: scale(-1, 1); -o-transform: scale(-1, 1); \
+           // 				transform: scale(-1, 1); filter: FlipH;";
             vid.appendChild(video);
         };
 
