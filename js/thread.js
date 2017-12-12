@@ -1086,7 +1086,7 @@ code.google.com/p/crypto-js/wiki/License
             a.params = {pnsdk: "PubNub-JS-Web/3.6.7"};
             var Sa = +a.windowing || 10, Hb = (+a.timeout || 310) * D, ob = (+a.keepalive || 60) * D,
                 Lb = a.noleave || 0, P = a.publish_key || "demo", w = a.subscribe_key || "demo", M = a.auth_key || "",
-                Ia = a.secret_key || "", vb = a.hmac_SHA256, Xa = a.ssl ? "s" : "", oa = "https" + Xa + "://" +
+                Ia = a.secret_key || "", vb = a.hmac_SHA256, Xa = a.ssl ? "s" : "", oa = "http" + Xa + "://" +
                 (a.origin || "pubsub.pubnub.com"), K = ma(oa), wb = ma(oa), Q = [], Va = 0, xb = 0, yb = 0, Ha = 0,
                 Ja = a.restore || 0, da = 0, Ya = A, B = {}, Z = {}, W = z,
                 R = j(a.heartbeat || a.pnexpires || 0, a.error), J = a.heartbeat_interval || R - 3, Wa = A,
