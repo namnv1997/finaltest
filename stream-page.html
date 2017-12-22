@@ -91,7 +91,6 @@
             // });
         });
     </script>
-    <script src="js/snow.js"></script>
 </head>
 
 <body >
@@ -139,10 +138,9 @@
         <div>
             <div id="vid-box"></div>
         </div>
-        <div>
+        <div style="color: #ffffff;">
             <h3 style="margin-left:20px;">Stream Now</h3>
-            <ul id="userOnline" style="margin-left:20px; overflow: auto;">
-
+            <ul id="userOnline" style="margin-left:20px;">
             </ul>
         </div>
     </div>
@@ -151,10 +149,11 @@
 
             <div id="stream-info" hidden="true">
                 <button id="end" onclick="end()" hidden="true">Done</button>
-                <img src="img/person_dark.png"/>
+                <img src="img/person_light.png"/>
                 <span id="here-now">0</span>
             </div>
-            <form name="streamForm" id="stream" action="#" onsubmit="return errWrap(stream,this);">
+            <div id="input-wrapper">
+                <form name="streamForm" id="stream" action="#" onsubmit="return errWrap(stream,this);">
                     <span class="input input--nao">
                         <input class="input__field input__field--nao" type="text" name="streamname"
                                placeholder="Enter Stream Name" id="streamname"
@@ -169,12 +168,12 @@
                             />
                         </svg>
                     </span>
-                <button id="stream-button" class="cbutton cbutton--effect-radomir" type="submit" value="Stream"
-                        name="stream_submit" style="margin-top: 40px; margin-left:-10px">
-                    <i class="cbutton__icon fa fa-fw fa fa fa-video-camera"></i>
-                </button>
-            </form>
-            <form name="watchForm" id="watch" action="#" onsubmit="return errWrap(watch,this);">
+                    <button id="stream-button" class="cbutton cbutton--effect-radomir" type="submit" value="Stream"
+                            name="stream_submit" style="margin-top: 40px; margin-left:-10px">
+                        <i class="cbutton__icon fa fa-fw fa fa fa-video-camera"></i>
+                    </button>
+                </form>
+                <form name="watchForm" id="watch" action="#" onsubmit="return errWrap(watch,this);">
                     <span class="input input--nao">
                         <input class="input__field input__field--nao" type="text" name="number"
                                placeholder="Enter Stream To Watch!" id="streamwatch"
@@ -189,11 +188,12 @@
                             />
                         </svg>
                     </span>
-                <button id="user-button" class="cbutton cbutton--effect-radomir" type="submit" value="Watch"
-                        style="margin-top: 40px; margin-left:-10px">
-                    <i class="cbutton__icon fa fa-fw fa fa-eye"></i>
-                </button>
-            </form>
+                    <button id="user-button" class="cbutton cbutton--effect-radomir" type="submit" value="Watch"
+                            style="margin-top: 40px; margin-left:-10px">
+                        <i class="cbutton__icon fa fa-fw fa fa-eye"></i>
+                    </button>
+                </form>
+            </div>
         </div>
         <div class="chat-box">
             <script src="js/chat-box.js"></script>

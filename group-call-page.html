@@ -75,7 +75,8 @@
         <div id="vid-box"></div>
         <div id="vid-thumb"></div>
 
-        <form name="loginForm" id="login" action="#" onsubmit="return errWrap(login,this);">
+       <div id="body-wrapper">
+           <form name="loginForm" id="login" action="#" onsubmit="return errWrap(login,this);">
         <span class="input input--nao">
             <input class="input__field input__field--nao" type="text" name="username" id="username"
                    placeholder="Enter A Username"/>
@@ -89,14 +90,14 @@
                 </svg>
         </span>
 
-            <button id="call-yours" class="cbutton cbutton--effect-radomir" type="submit" name="login_submit"
-                    value="Log In"
-                    style="margin-top: 40px; margin-left:-10px">
-                <i class="cbutton__icon fa fa-fw fa fa-sign-in"></i>
-            </button>
-        </form>
+               <button id="call-yours" class="cbutton cbutton--effect-radomir" type="submit" name="login_submit"
+                       value="Log In"
+                       style="margin-top: 40px; margin-left:-10px">
+                   <i class="cbutton__icon fa fa-fw fa fa-sign-in"></i>
+               </button>
+           </form>
 
-        <form name="callForm" action="#" onsubmit="return errWrap(makeCall,this);">
+           <form name="callForm" action="#" onsubmit="return errWrap(makeCall,this);">
         <span class="input input--nao">
             <input class="input__field input__field--nao" type="text" name="number" placeholder="Enter User To Call!"/>
 					<label class="input__label input__label--nao">
@@ -108,19 +109,20 @@
 				    <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
 				</svg>
         </span>
-            <button id="call-other" class="cbutton cbutton--effect-radomir md-trigger" type="submit" value="Call"
-                    style="margin-top: 40px; margin-left:-10px" data-modal="modal-13">
-                <i class="cbutton__icon fa fa-fw fa fa fa-phone-square"></i>
-            </button>
-        </form>
+               <button id="call-other" class="cbutton cbutton--effect-radomir md-trigger" type="submit" value="Call"
+                       style="margin-top: 40px; margin-left:-10px" data-modal="modal-13">
+                   <i class="cbutton__icon fa fa-fw fa fa fa-phone-square"></i>
+               </button>
+           </form>
 
-        <div id="inCall" class="ptext">
-            <button id="end" onclick="end()">End</button>
-            <button id="mute" onclick="mute()">Mute</button>
-            <button id="pause" onclick="pause()">Pause</button>
-        </div>
+           <div id="inCall" class="ptext">
+               <button id="end" onclick="end()">End</button>
+               <button id="mute" onclick="mute()">Mute</button>
+               <button id="pause" onclick="pause()">Pause</button>
+           </div>
 
-        <div id="logs" class="ptext"></div>
+           <div id="logs" class="ptext"></div>
+       </div>
 
         <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- -->
         <!-- WebRTC Peer Connections -->
@@ -244,6 +246,6 @@
     });
 </script>
 <canvas id="canvas">Canvas is not supported in your browser.</canvas>
-<script type="text/javascript" src="js/firework.js"> </script>
+<script type="text/javascript" src="js/firework-1.js"> </script>
 </body>
 </html>

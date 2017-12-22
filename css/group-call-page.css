@@ -1,17 +1,16 @@
 html{
     height: 100%;
-    background-color: #EEEEEE;
 }
 input::-webkit-input-placeholder {
     font-family: "Comic Sans MS" !important;
 }
 body{
     font-family: "Comic Sans MS" !important;
-    background-color: #EEEEEE;
+    overflow-x: hidden !important;
+    background-color: #000000;
 }
 .container-fluid{
     padding: 0;
-    background-color: #EEEEEE;
     overflow: hidden;
     min-width: 1366px;
 }
@@ -25,7 +24,7 @@ body{
 #nav-bar {
     margin-bottom: 0;
     border-radius: 0;
-    background-color: #2c8383;
+    background-color: #212121;
     border: none;
     margin-bottom: 5px;
 }
@@ -61,7 +60,7 @@ body{
 
 #myNavbar a {
     color: #ffffff;
-    background-color: #2c8383;
+    background-color: #212121;
 }
 
 #myNavbar ul {
@@ -69,7 +68,7 @@ body{
 }
 
 .navbar-nav > .open > a {
-    background-color: #2c8383 !important;
+    background-color: #212121 !important;
 }
 
 .navbar-inverse .navbar-toggle {
@@ -78,7 +77,7 @@ body{
 
 .navbar-inverse .navbar-toggle:focus,
 .navbar-inverse .navbar-toggle:hover {
-    background-color: #2c8383;
+    background-color: #212121;
 }
 
 #myNavbar ul li {
@@ -86,19 +85,8 @@ body{
     padding-top: 5px;
 }
 
-.dropdown a {
-    padding-top: 8px !important;
-}
-
-.dropdown a img {
-    border-radius: 20px;
-}
-
-.dropdown ul {
-    background-color: #2c8383;
-}
 #username{
-    background-color: #EEEEEE !important;
+    background-color: #212121 !important;
 }
 #inCall, #logs{
     background-color: transparent;
@@ -107,11 +95,14 @@ body{
 }
 #inCall button{
     color: #FFFFFF;
-    background-color: #2c8383;
-    border: 1px solid #2c8383;
+    background-color: #424242;
+    border: 1px solid #424242;
     border-radius: 2px;
     padding: 5px 15px;
     font-family: "Comic Sans MS";
+}
+#inCall button:hover{
+    background-color: #aaaaaa;
 }
 .input {
     position: relative;
@@ -132,7 +123,7 @@ body{
     border: none;
     border-radius: 0;
     background: #f0f0f0;
-    color: #aaa;
+    color: #aaaaaa;
     font-weight: 400;
     font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
     -webkit-appearance: none; /* for box shadows to show on iOS */
@@ -144,7 +135,7 @@ body{
     border: none;
     border-radius: 0;
     background: #f0f0f0;
-    color: #aaa;
+    color: #aaaaaa;
     font-weight: 400;
     font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
     -webkit-appearance: none; /* for box shadows to show on iOS */
@@ -201,7 +192,6 @@ body{
     padding: 0.5em 0em 0.25em;
     width: 100%;
     background: transparent;
-    color: #19a2c6;
     font-size: 1.25em;
 }
 
@@ -289,7 +279,6 @@ perspective effects (not including the modals and the overlay).
 }
 
 .container {
-    background: #e74c3c;
     min-height: 100%;
 }
 
@@ -315,7 +304,6 @@ perspective effects (not including the modals and the overlay).
 
 .md-show {
     visibility: visible;
-    border: 3px solid #19a2c6;
 
 }
 
@@ -328,7 +316,6 @@ perspective effects (not including the modals and the overlay).
     left: 0;
     z-index: 1000;
     opacity: 0;
-    background: #d02129;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
@@ -344,7 +331,6 @@ perspective effects (not including the modals and the overlay).
 /* Content styles */
 .md-content {
     /*	color: #fff;*/
-    background: #d02129;
     position: relative;
     border-radius: 3px;
     margin: 0 auto;
@@ -358,7 +344,6 @@ perspective effects (not including the modals and the overlay).
     font-size: 2.4em;
     font-weight: 300;
     opacity: 0.8;
-    background: rgba(0, 0, 0, 0.1);
     border-radius: 3px 3px 0 0;
 }
 
@@ -385,9 +370,7 @@ perspective effects (not including the modals and the overlay).
 
 .md-content button {
     font-size: 2em;
-    background-color: #d02129;
     border-style: none;
-    color: #eff1f1;
 
 }
 
@@ -459,7 +442,7 @@ perspective effects (not including the modals and the overlay).
     padding: 0;
     border: none;
     background: none;
-    color: #2c8383;
+    color: #ffffff;
     font-size: 1.4em;
     overflow: visible;
     -webkit-transition: color 0.7s;
@@ -470,7 +453,7 @@ perspective effects (not including the modals and the overlay).
 .cbutton.cbutton--click,
 .cbutton:focus {
     outline: none;
-    color: #3c8ddc;
+    color: #424242;
 }
 
 .cbutton__icon {
@@ -548,8 +531,8 @@ perspective effects (not including the modals and the overlay).
     width: 400px;
     min-height: 555px;
     margin: auto;
-    border: 1px solid #2c8383;
-    background-color: #2c8383;
+    border: 1px solid #424242;
+    background-color: #424242;
     z-index: 1000;
 }
 .chat-box-header{
@@ -571,7 +554,7 @@ perspective effects (not including the modals and the overlay).
     right: 5px;
     bottom: 86px;
     overflow-y: scroll;
-    background-color: white;
+    background-color: #eeeeee;
 }
 #chat-box-form-wrapper{
     position: absolute;
@@ -588,7 +571,7 @@ perspective effects (not including the modals and the overlay).
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: white;
+    background-color: #ffffff;
 }
 #chat-box-form span{
     width: 75% !important;
@@ -598,8 +581,8 @@ perspective effects (not including the modals and the overlay).
 #chat-box-button{
     position: absolute;
     bottom: 15px;
-    background-color: #2c8383;
-    border-color: #2c8383;
+    background-color: #424242;
+    border-color: #424242;
     padding: 10px 12px;
 }
 #show-button-chat{
@@ -607,57 +590,72 @@ perspective effects (not including the modals and the overlay).
     left: 0;
     top: 65px;
     color: #FFFFFF;
-    background-color: #2c8383;
-    border: 1px solid #2c8383;
+    background-color: #212121;
+    border: 1px solid #212121;
     padding: 100px 0px;
 }
 #show-button-chat:hover{
     padding: 100px 12px;
+}
+#show-button-chat:focus{
+    outline: none;
 }
 #show-button-files{
     position: fixed;
     left: 0px;
     top: 400px;
     color: #FFFFFF;
-    background-color: #2c8383;
-    border: 1px solid #2c8383;
+    background-color: #212121;
+    border: 1px solid #212121;
     padding: 100px 0px;
 }
 #show-button-files:hover{
     padding: 100px 12px;
 }
+#show-button-files:focus{
+    outline: none;
+}
 .modal-header{
-    background-color: #2c8383;
+    background-color: #424242;
 }
 .modal-title{
     color: #FFFFFF;
 }
 button[data-dismiss="modal"]{
     color: #FFFFFF;
-    background-color: #2c8383;
+    background-color: #424242;
+    border-color: #424242;
 }
 button[data-dismiss="modal"]:hover{
-    color: #FFFFFF;;
+    color: #FFFFFF;
+    background-color: #aaaaaa;
+    border-color: #aaaaaa;
 }
 .modal-top{
     padding-top: 10px;
 }
 .modal-top button{
-    background-color: #2c8383;
-    border-color: #2c8383;
+    background-color: #424242;
+    border-color: #424242;
 }
 .modal-bottom{
     padding-top: 10px;
 }
 .modal-bottom button{
-    background-color: #2c8383;
-    border-color: #2c8383;
-    color: #EEEEEE;
+    background-color: #424242;
+    border-color: #424242;
+    color: #aaaaaa;
 }
 #wrapper {
-    opacity:0.8;
+    opacity: 0.8;
     position: absolute;
     top:0;
     right:0;
     left: 0;
+}
+#body-wrapper{
+    width: 40%;
+    margin: auto;
+    background-color: #212121;
+    border-radius: 2px;
 }
